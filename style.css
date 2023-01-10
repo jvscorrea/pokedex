@@ -66,3 +66,16 @@ body{
     font-weight: 400;
     text-transform: capitalize;
 }
+
+@media only screen and (max-width : 490px) {
+    .wrapper{
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .card{
+        width: 8rem;
+        height: 8rem;
+        padding-top: 0rem;
+    }
+}
