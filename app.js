@@ -1,5 +1,5 @@
 // Acessando API
-fetch("https://pokeapi.co/api/v2/pokemon?limit=150")
+fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
 .then(response => response.json())
 .then(allPokemons => {
     pokemon = [];
@@ -16,7 +16,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=150")
             })
 
             // Comparando a quantidade
-            if(pokemon.length == 150){
+            if(pokemon.length == 151){
 
                 let pokemonClass = document.querySelector('.pokemons')
 
@@ -35,3 +35,26 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=150")
         })
     })
 })
+
+document.querySelector('#search-input').addEventListener('input', filterList);
+
+function filterList(){
+
+	const searchInput = document.querySelector('#search-input');
+	const filter = searchInput.value.toLowerCase();
+	const listItems = document.querySelectorAll('.card');
+
+	listItems.forEach((item) => {
+		let text = item.textContent;
+
+		console.log(text)
+
+		if(text.toLowerCase().includes(filter.toLowerCase())){
+			item.style.display = '';
+		}else{
+			item.style.display = 'none';
+		}	
+	});
+
+    console.log(listItems)
+}
