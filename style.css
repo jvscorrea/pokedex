@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+
+body{
+    background: #e73d31;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wrapper{
+    width: 50%;
+}
+
+.logo{
+    display: block;
+    margin: 3rem auto;
+}
+
+.search{
+    display: flex;
+    margin: 2rem 0;
+}
+
+.search input{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #000000;
+}
+
+.pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    columns: 3;
+    justify-content: space-around;
+}
+
+.card{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 0.2rem;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+}
+
+.card h1{
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
