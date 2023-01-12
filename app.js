@@ -47,14 +47,10 @@ function filterList(){
 	listItems.forEach((item) => {
 		let text = item.textContent;
 
-		console.log(text)
-
 		if(text.toLowerCase().includes(filter.toLowerCase())){
 			item.style.display = '';
 		}else{
 			item.style.display = 'none';
 		}	
 	});
-
-    console.log(listItems)
 }
